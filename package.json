@@ -1,0 +1,24 @@
+{
+  "name": "vue_web_cli",
+  "version": "1.0.0",
+  "description": "a cli of vue for web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/no3forfuk/vue_web_cli.git"
+  },
+  "keywords": [
+    "vue",
+    "web",
+    "cli"
+  ],
+  "author": "jsir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/no3forfuk/vue_web_cli/issues"
+  },
+  "homepage": "https://github.com/no3forfuk/vue_web_cli#readme"
+}
