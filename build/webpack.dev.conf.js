@@ -40,9 +40,7 @@ module.exports = merge(base, {
                         "qs": requset.query,
                         "json": true,
                         "uri": baseUrl + requset.url,
-                        "headers": {
-                            "authorization": requset.headers.authorization
-                        }
+                        "headers": requset.headers
                     }
                 }
                 if (method == 'POST') {
@@ -51,9 +49,7 @@ module.exports = merge(base, {
                         "body": requset.body,
                         "json": true,
                         "uri": baseUrl + requset.url,
-                        "headers": {
-                            "authorization": requset.headers.authorization
-                        }
+                        "headers": requset.headers
                     }
                 }
                 rp(options).then(data => {
@@ -62,13 +58,15 @@ module.exports = merge(base, {
                     throw err;
                 })
             }
-            app.get('/wechatmodule/myinfo.do', function (req, res) {
-                go(req, res)
-            });
-            app.get('/wechatwork/myreservation.do', function (req, res) {
-                go(req, res)
-            });
-        }
-
+        },
+        // proxy: {
+        //     '/api': {  //使用"/api"来代替"http://f.apiplus.c"
+        //         target: 'http://47.99.223.173:8080', //源地址
+        //         changeOrigin: true, //改变源
+        //         pathRewrite: {
+        //             '^/api': 'http://47.99.223.173:8080' //路径重写
+        //         }
+        //     }
+        // },
     }
 })
